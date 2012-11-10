@@ -1,0 +1,18 @@
+<html>
+<head>
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript">
+  // get socket instance
+  var socket = io.connect('http://localhost');
+
+  socket.on('sayHandler', function (data) {
+    console.log(data.id + ' have said ' + data.text);
+  });
+
+  function say(message) {
+    socket.emit('say', {text: message});
+  }
+  </script>
+</head>
+<body></body>
+</html>
