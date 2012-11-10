@@ -1,9 +1,16 @@
-// require Class
+// Conflict between express.js 3.x and socket.io: 
 // var express = require('express');
-//var app = express();
+// var expressApp = express();
 //
+// var app = require('http').createServer(expressApp)
+//    ,io = require('socket.io').listen(app)
 //
-//socke.server
+// wrap an another object to work-around
+// 
+//
+// external packages:
+// socket.server
+// cluster.io => graphically show benchmark(presure testing) of socket.io on current server
 
 var app = require('http').createServer(handler)
 ,io = require('socket.io').listen(app)
